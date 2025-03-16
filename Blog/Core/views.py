@@ -20,3 +20,20 @@ def detalle_profesor(request, pk):
 def lista_cursos(request):
     cursos = Curso.objects.all()
     return render(request, 'Core/cursos_list.html', {'cursos': cursos})
+
+def detalle_curso(request, pk):
+    curso = get_object_or_404(Curso, pk=pk)
+    return render(request, 'Core/curso_detail.html', {'curso': curso})
+
+
+def index(request):
+    return render(request, 'Core/index.html')
+
+def cursos(request):
+    return render(request, 'Core/cursos.html')
+
+def profesores(request):
+    return render(request, 'Core/profesores.html')
+
+def estudiantes(request):
+    return render(request, 'Core/estudiantes.html')

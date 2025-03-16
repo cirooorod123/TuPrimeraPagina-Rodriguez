@@ -1,0 +1,15 @@
+{% block title %}Estudiantes{% endblock title %}
+
+{%block content_title%}
+Lista de cursos
+{%endblock content_title%}
+
+{%block content%}
+<ul>
+    {% for Curso in lista_cursos %}
+    <li><a href="{% url 'detalle_cursos' cursos.id %}">{{ Curso.nombre }}</a></li>
+    {% endfor %}
+</ul>
+
+    
+{%endblock content %}

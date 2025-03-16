@@ -1,0 +1,17 @@
+{% extends 'Core/base.html' %}
+
+{% block title %}Estudiantes{% endblock title %}
+
+{%block content_title%}
+Lista de estudiantes
+{%endblock content_title%}
+
+{%block content%}
+<ul>
+    {% for estudiante in lista_estudiantes %}
+    <li><a href="{% url 'detalle_estudiante' estudiante.id %}">{{ Estudiante.nombre }}</a></li>
+    {% endfor %}
+</ul>
+
+    
+{%endblock content %}

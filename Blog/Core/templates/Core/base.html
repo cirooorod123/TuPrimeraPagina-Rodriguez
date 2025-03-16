@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog |{% block_title%}{% endblock_title%}  </title>
+    <title>Blog |{% block title%}{% endblock title%}  </title>
 </head>
 <body>
     <nav class="navbar bg-body-tertiary">
@@ -15,13 +15,15 @@
         </div>
       </nav>
 
-    <div> class="container mt-5">
-        <h1> class="text-center mb-4">
+
+    <div> 
+        <h1> 
+            
             {% block content_title %}
             {% endblock content_title%} 
         </h1>
-        {% block_content %}
-        {% endblock_content %}
+        {% block content %}
+        {% endblock content %}
       
     </div>
 

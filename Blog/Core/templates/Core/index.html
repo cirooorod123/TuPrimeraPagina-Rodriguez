@@ -1,6 +1,45 @@
 {% extends 'Core/base.html' %}
 
-{%block_title%}
-Inicio
-{%endblock_title%}
+{% block title %}Inicio{% endblock title %}
 
+{% block content_title %}
+Bienvenido a la página de inicio
+{% endblock content_title %}
+
+{% block content %}
+
+<style>
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn {
+        display: block;
+        width: 250px;
+        padding: 12px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 6px;
+        transition: background-color 0.3s;
+        text-align: center;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<div class="btn-container">
+    <a href="/estudiantes/" class="btn">Listado de Estudiantes</a>
+    <a href="/profesores/" class="btn">Listado de Profesores</a>
+    <a href="/cursos/" class="btn">Listado de Cursos</a>
+</div>
+
+{% endblock content %}

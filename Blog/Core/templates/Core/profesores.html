@@ -1,0 +1,17 @@
+{% extends 'Core/base.html' %}
+
+{% block title %}Profesores{% endblock title %}
+
+{%block content_title%}
+Lista de profesores
+{%endblock content_title%}
+
+{%block content%}
+<ul>
+    {% for Profesor in lista_profesores %}
+    <li><a href="{% url Profesor.id %}">{{ Profesor.nombre }}</a></li>
+    {% endfor %}
+</ul>
+
+    
+{%endblock content %}
